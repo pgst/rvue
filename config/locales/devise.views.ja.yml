@@ -13,6 +13,12 @@ ja:
         password: 'パスワード'
         password_confirmation: '確認用パスワード'
         remember_me: 'ログインを記憶'
+        name: 'ID名'
+      admin:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: '確認用パスワード'
+        remember_me: 'ログインを記憶'
     models:
       user: 'ユーザ'
   date:
