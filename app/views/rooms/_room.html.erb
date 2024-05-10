@@ -1,12 +1,15 @@
 <div id="<%= dom_id room %>">
-  <p>
-    <strong>Name:</strong>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">ルーム名：</strong>
     <%= room.name %>
   </p>
-
-  <p>
-    <strong>Profile:</strong>
+  <p class="my-5">
+    <strong class="block font-medium mb-1">詳細案内：</strong>
     <%= room.profile %>
   </p>
-
+  <% if action_name != 'show' %>
+    <%= link_to '表示', room, class: 'rounded-lg py-3 px-5 inline-block font-medium bg-gray-100' %>
+    <%= link_to '編集', edit_room_path(room), class: 'rounded-lg py-3 px-5 inline-block font-medium bg-gray-100 ml-2' %>
+  <hr class="mt-6">
+  <% end %>
 </div>
