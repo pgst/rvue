@@ -1,9 +1,9 @@
 {
-	"name": "Ruby",
-	"image": "mcr.microsoft.com/devcontainers/ruby:1-3.3-bullseye",
-	"features": {
-		"ghcr.io/devcontainers/features/node:1": {}
-	},
+  "name": "Ruby",
+  "image": "mcr.microsoft.com/devcontainers/ruby:1-3.3-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {}
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -12,12 +12,12 @@
         "kaiwood.endwise",
         "bung87.rails",
         "ecmel.vscode-html-css",
-        "Shopify.ruby-extensions-pack"
+        "Shopify.ruby-extensions-pack",
+        "alexcvzz.vscode-sqlite"
       ]
     }
   },
   "containerEnv": {
     "TZ": "Asia/Tokyo"
   }
-
 }
