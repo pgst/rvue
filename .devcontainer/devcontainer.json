@@ -1,0 +1,23 @@
+{
+	"name": "Ruby",
+	"image": "mcr.microsoft.com/devcontainers/ruby:1-3.3-bullseye",
+	"features": {
+		"ghcr.io/devcontainers/features/node:1": {}
+	},
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "mhutchie.git-graph",
+        "kaiwood.endwise",
+        "bung87.rails",
+        "ecmel.vscode-html-css",
+        "Shopify.ruby-extensions-pack"
+      ]
+    }
+  },
+  "containerEnv": {
+    "TZ": "Asia/Tokyo"
+  }
+
+}
