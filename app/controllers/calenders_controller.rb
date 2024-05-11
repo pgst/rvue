@@ -1,9 +1,12 @@
 class CalendersController < ApplicationController
   before_action :set_calender, only: %i[ show edit update destroy ]
+  include CalenderData
 
   # GET /calenders or /calenders.json
   def index
     @calenders = Calender.all
+    month = params[:month]
+    calender_for_view(month)
   end
 
   # GET /calenders/1 or /calenders/1.json
