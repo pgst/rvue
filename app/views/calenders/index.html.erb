@@ -1,14 +1,17 @@
-<p style="color: green"><%= notice %></p>
+<div class="w-full">
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl">Calenders</h1>
 
-<h1>Calenders</h1>
+    <div id="calenders">
+      <% @calenders.each do |calender| %>
+        <%= render calender %>
+        <p>
+          <%= link_to "Show this calender", calender %>
+        </p>
+      <% end %>
+    </div>
 
-<div id="calenders">
-  <% @calenders.each do |calender| %>
-    <%= render calender %>
-    <p>
-      <%= link_to "Show this calender", calender %>
-    </p>
-  <% end %>
+    <%= link_to 'New calender', new_calender_path, \
+            class: 'rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium' %>
+  </div>
 </div>
-
-<%= link_to "New calender", new_calender_path %>
