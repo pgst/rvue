@@ -31,6 +31,13 @@ ja:
       room:
         name: 'ルーム名'
         profile: '詳細案内'
+      regulation:
+        begin_time: '開始時刻'
+        close_time: '終了時刻'
+        interval_s: '昼休開始'
+        interval_e: '昼休終了'
+        unit_minute: '単位：分'
+        version: 'バージョン'
     models:
       user: 'ユーザ'
       admin: 'アドミン'

@@ -7,6 +7,13 @@ class CalendersController < ApplicationController
     @calenders = Calender.all
     month = params[:month]
     calender_for_view(month)
+
+    regulation = Regulation.last
+    @begin_time = regulation.begin_time
+    @close_time = regulation.close_time
+    @interval_s = regulation.interval_s
+    @interval_e = regulation.interval_e
+    @unit_minute = regulation.unit_minute
   end
 
   # GET /calenders/1 or /calenders/1.json
@@ -16,6 +23,13 @@ class CalendersController < ApplicationController
   # GET /calenders/new
   def new
     @calender = Calender.new
+    @calender.day = params[:day]
+    puts params[:begin_time]
+    @calender.begin_time = params[:day] + 'T' + params[:begin_time]
+    @calender.close_time = params[:day] + 'T' + params[:close_time]
+    @calender.interval_s = params[:day] + 'T' + params[:interval_s]
+    @calender.interval_e = params[:day] + 'T' + params[:interval_e]
+    @calender.unit_minute = params[:unit_minute]
   end
 
   # GET /calenders/1/edit

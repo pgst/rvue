@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     registrations: "users/registrations",
     sessions: "users/sessions"
   }
+  resources :regulations
   resources :calenders
   resources :rooms
   root "rooms#index"
